@@ -42,6 +42,8 @@ group :development, :test do
   gem 'simplecov', :require => false
   gem 'simplecov-json', :require => false
   gem 'simplecov-csv', :require => false
+  # add rubocop
+  gem 'rubocop', :require => false
 end
 
 group :development do
