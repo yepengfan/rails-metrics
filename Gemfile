@@ -38,6 +38,10 @@ group :development, :test do
 
   # add rspec rails
   gem 'rspec-rails', '~> 3.0'
+  # add simplecov
+  gem 'simplecov', :require => false
+  gem 'simplecov-json', :require => false
+  gem 'simplecov-csv', :require => false
 end
 
 group :development do
