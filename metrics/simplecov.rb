@@ -2,17 +2,7 @@ require 'json'
 
 def report_coverage
   coverage_json = read_json
-  code_coverage = calculate_coverage coverage_json
-
-  metrics_report = {
-    "code_coverage" => "#{code_coverage}"
-  }
-
-  File.open("project_metrics.json", "w") do |f|
-    f.write(metrics_report.to_json)
-  end
-
-  metrics_report
+  calculate_coverage coverage_json
 end
 
 def read_json
