@@ -45,6 +45,10 @@
   * number of errors
   * number of security warnings
 
+## How to generate project metrics
+* Run `ruby metrics/metrics_report.rb` in the project directory
+* The metrics json file will be in `metrics/project_metrics.json`
+
 ## Sample metrics json
 ![sample project metrics](./metrics.png)
 
