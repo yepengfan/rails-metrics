@@ -7,16 +7,19 @@ require_relative './brakeman.rb'
 trigger_simplecov
 brakeman_report
 
-puts "code coverage: #{report_coverage}"
-puts "file inspected: #{file_inspected}"
-puts "offences detected: #{offences_detected}"
-puts "warnings: #{warnings}"
-puts "flog total: #{flog_total}"
-puts "flog method average: #{flog_method_average}"
-puts "flog method total: #{flog_method_total}"
-
-puts "controllers: #{controllers}"
-puts "models: #{models}"
-puts "templates: #{templates}"
-puts "errors: #{errors}"
-puts "security warnings: #{security_warnings}"
+def project_metrics
+   {
+    "code coverage": "#{report_coverage}",
+    "file inspected": "#{file_inspected}",
+    "offences detected": "#{offences_detected}",
+    "warnings": "#{warnings}",
+    "flog total": "#{flog_total}",
+    "flog method average": "#{flog_method_average}",
+    "flog method total": "#{flog_method_total}",
+    "controllers": "#{controllers}",
+    "models": "#{models}",
+    "templates": "#{templates}",
+    "errors": "#{errors}",
+    "security warnings": "#{security_warnings}"
+  }
+end
