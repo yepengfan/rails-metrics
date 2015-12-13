@@ -21,3 +21,4 @@
 
 # ignore brakeman_report.json
 /metrics/brakeman_report.json
+/metrics/project_metrics.json
