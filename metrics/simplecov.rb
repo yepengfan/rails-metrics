@@ -1,5 +1,9 @@
 require 'json'
 
+def trigger_simplecov
+  `rspec`
+end
+
 def report_coverage
   coverage_json = read_json
   calculate_coverage coverage_json

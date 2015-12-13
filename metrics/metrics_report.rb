@@ -4,10 +4,6 @@ require_relative './reek.rb'
 require_relative './flog.rb'
 require_relative './brakeman.rb'
 
-def trigger_simplecov
-  `rspec`
-end
-
 trigger_simplecov
 brakeman_report
 
