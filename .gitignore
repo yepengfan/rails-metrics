@@ -18,3 +18,6 @@
 
 # ignore coverage folder
 /coverage/*
+
+# ignore brakeman_report.json
+/metrics/brakeman_report.json
