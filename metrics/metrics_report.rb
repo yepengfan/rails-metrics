@@ -32,5 +32,5 @@ def export_metrics
   end
 end
 
-puts "Exporting project metrics to /metrics/project_metrics.json"
+puts "\n\nExporting project metrics to /metrics/project_metrics.json"
 export_metrics
