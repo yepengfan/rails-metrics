@@ -1,10 +1,17 @@
+require_relative './simplecov.rb'
 require_relative './rubocop.rb'
 require_relative './reek.rb'
 require_relative './flog.rb'
 require_relative './brakeman.rb'
 
+def trigger_simplecov
+  `rspec`
+end
+
+trigger_simplecov
 brakeman_report
 
+puts "code coverage: #{report_coverage}"
 puts "file inspected: #{file_inspected}"
 puts "offences detected: #{offences_detected}"
 puts "warnings: #{warnings}"
