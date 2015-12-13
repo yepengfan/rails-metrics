@@ -46,6 +46,8 @@ group :development, :test do
   gem 'rubocop', :require => false
   # add reek
   gem 'reek', :require => false
+  # add flog
+  gem 'flog', :require => false
 end
 
 group :development do
