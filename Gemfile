@@ -48,6 +48,8 @@ group :development, :test do
   gem 'reek', :require => false
   # add flog
   gem 'flog', :require => false
+  # add brakeman
+  gem 'brakeman', :require => false
 end
 
 group :development do
