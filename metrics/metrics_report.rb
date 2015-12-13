@@ -1,3 +1,5 @@
+require 'json'
+
 require_relative './simplecov.rb'
 require_relative './rubocop.rb'
 require_relative './reek.rb'
@@ -23,3 +25,12 @@ def project_metrics
     "security warnings": "#{security_warnings}"
   }
 end
+
+def export_metrics
+  File.open("./metrics/project_metrics.json", "w") do |f|
+    f.write(project_metrics.to_json)
+  end
+end
+
+puts "Exporting project metrics to /metrics/project_metrics.json"
+export_metrics
