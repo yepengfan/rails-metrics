@@ -1,3 +1,15 @@
+require 'simplecov'
+require 'simplecov-json'
+require 'simplecov-csv'
+
+SimpleCov.formatters = [
+  SimpleCov::Formatter::HTMLFormatter,
+  SimpleCov::Formatter::JSONFormatter,
+  SimpleCov::Formatter::CSVFormatter,
+]
+
+SimpleCov.start
+
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
