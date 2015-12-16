@@ -1,7 +1,17 @@
 require 'json'
 
 def trigger_simplecov
+  File.directory?('spec/') ? trigger_rspec : trigger_minitest
+end
+
+def trigger_rspec
+  puts "Rspec tests detected!"
   `rspec`
+end
+
+def trigger_minitest
+  puts "minitest tests detected!"
+  `rake test`
 end
 
 def report_coverage
