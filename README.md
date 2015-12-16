@@ -48,6 +48,8 @@
 ## How to generate project metrics
 * Run `ruby metrics/metrics_report.rb` in the project directory
 * The metrics json file will be in `metrics/project_metrics.json`
+* The test coverage support both [rspec](https://github.com/rspec/rspec) and
+[minitest](https://github.com/seattlerb/minitest)
 
 ## Sample metrics json
 ![sample project metrics](./metrics.png)
